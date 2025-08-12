@@ -1,8 +1,8 @@
 import Header from '@/components/Header'
 import React, { useEffect, useRef, useState } from 'react'
 import carDetails from '../Shared/carDetails.json'
-import InputField from './components/inputField'
-import DropDownField from './components/DropDownField'
+import InputField from './components/InputField' //Input
+import DropDownField from './components/DropDownField' 
 import TextAreaField from './components/TextAreaField'
 import { Separator } from '@/components/ui/separator'
 import features from '../Shared/features.json'
