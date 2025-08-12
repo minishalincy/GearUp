@@ -3,8 +3,7 @@
 GearUp is a **Full Stack Car Marketplace Application** built with **React.js**, **Tailwind CSS**, **Drizzle ORM**, **Clerk**, and **Sendbird**.  
 It allows users to browse, search, list, and manage car listings, as well as engage in **real-time chat** with potential buyers or sellers.
 
-##  Live Demo
-🔗 **[Visit GearUp](gear-iimhaomok-minishalincys-projects.vercel.app)**
+
 
 ---
 
