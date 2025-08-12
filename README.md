@@ -20,7 +20,7 @@ It allows users to browse, search, list, and manage car listings, as well as eng
 ## 🛠 Tech Stack
 **Frontend:**
 - React.js
-- Tailwind CSS
+- Tailwind CSS,shadcn UI components
 - React Router DOM
 
 **Backend & Database:**
