@@ -4,20 +4,16 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './home'
 import Contact from './contact'
-import { ClerkProvider } from '@clerk/clerk-react'
+import { ClerkProvider, SignIn, SignUp } from '@clerk/clerk-react'
 import { dark } from '@clerk/themes' 
-import Profile from './profile'
 import AddListing from './add-listing'
 import { Toaster } from 'sonner'
 import SearchByCategory from './search/[category]'
 import SearchByOptions from './search'
 import ListingDetail from './listing-details/[id]'
-import SignUpPage from './SignUpPage';
-
-
-// ✅ Import your custom sign-in page
-import SignInPage from './SignInPage'
 import Inbox from './profile/components/Inbox'
+import MyListing from './profile/components/MyListing'
+import Profile from './profile/index'
 
 const router = createBrowserRouter([
   { path: '/', element: <Home /> },
@@ -27,31 +23,30 @@ const router = createBrowserRouter([
   { path: '/search', element: <SearchByOptions /> },
   { path: '/search/:category', element: <SearchByCategory /> },
   { path: '/listing-details/:id', element: <ListingDetail /> },
-  { path: '/sign-up', element: <SignUpPage /> },
- { path: "/inbox", element: <Inbox/> },
+  { path: '/inbox', element: <Inbox /> },
+  { path: '/my-listing', element: <MyListing /> },
 
-
-
-  // ✅ Custom login route
-  { path: '/sign-in', element: <SignInPage /> },
+  // Clerk auth routes:
+  { path: '/sign-in/*', element: <SignIn routing="path" path="/sign-in" /> },
+  { path: '/sign-up/*', element: <SignUp routing="path" path="/sign-up" /> },
 ])
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key")
+}
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ClerkProvider
       publishableKey={PUBLISHABLE_KEY}
+      appearance={{ baseTheme: dark }}
       afterSignOutUrl="/sign-in"
-      appearance={{
-        baseTheme: dark,
-        variables: {
-          colorPrimary: '#b91c1c',
-        },
-      }}
+      
     >
       <RouterProvider router={router} />
       <Toaster />
     </ClerkProvider>
-  </StrictMode>
+  </StrictMode>,
 )

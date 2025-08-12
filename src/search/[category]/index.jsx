@@ -32,12 +32,12 @@ function SearchByCategory() {
     <div>
       <Header />
 
-      <div className="p-4 md:p-10 bg-black flex justify-center items-center">
+      {/* <div className="p-4 md:p-10 bg-red-900 flex justify-center items-center">
         <div className="w-full max-w-2xl bg-white rounded-full shadow-xl px-6 py-4 md:px-8 md:py-6 flex items-center">
           <Search className="w-full max-w-2xl" />
         </div>
-      </div>
-      <div className='p-10 md:px-10'>
+      </div> */}
+      <div className='p-25 md:px-10'>
         <h2 className='font-bold text-4xl '>{category}</h2>
 
         {/* list of cars */}

@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "axios";
 
 const SendBirdApplicationId = import.meta.env.VITE_SENDBIRD_APP_ID;
 const SendBirdApiToken = import.meta.env.VITE_SENDBIRD_API_TOKEN;
@@ -49,7 +49,7 @@ const CreateSendBirdUser = (userId, nickName, profileUrl) => {
     );
 };
 
-// ✅ Get SendBird User (NEW)
+// ✅ Get SendBird User
 const GetSendBirdUser = (userId) => {
     return axios.get(
         `https://api-${SendBirdApplicationId}.sendbird.com/v3/users/${userId}`,
@@ -83,6 +83,6 @@ const CreateSendBirdChannel = (users, title) => {
 export default {
     FormatResult,
     CreateSendBirdUser,
-    GetSendBirdUser, // ✅ Added here
+    GetSendBirdUser,
     CreateSendBirdChannel
 };

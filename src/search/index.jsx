@@ -46,7 +46,7 @@ function SearchByOptions() {
           <Search className="w-full max-w-2xl" />
         </div>
       </div> */}
-      <div className='p-10 md:px-10'>
+      <div className='p-20 md:px-10'>
         <h2 className='font-bold text-4xl '>Search result</h2>
 
         {/* list of cars */}

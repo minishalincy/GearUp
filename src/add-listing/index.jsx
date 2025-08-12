@@ -113,7 +113,7 @@ function AddListing() {
 
     // ✅ Automatically navigate to My Listing page
     setTimeout(() => {
-      navigate('/my-listing'); // 👈 redirect to "My Listing"
+     navigate('/profile'); // 👈 redirect to "My Listing"
     }, 1000); // small delay to finish image upload
   }
 } catch (e) {
