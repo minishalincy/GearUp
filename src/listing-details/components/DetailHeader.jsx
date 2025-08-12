@@ -44,4 +44,4 @@ function DetailHeader({ carDetail }) {
     );
 }
 
-export default DetailHeader; 2
+export default DetailHeader; 

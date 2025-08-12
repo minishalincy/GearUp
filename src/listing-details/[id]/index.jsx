@@ -85,7 +85,7 @@ function ListingDetail() {
                 </div>
             </div>
 
-            <MostSearchedCar/>
+            {/* <MostSearchedCar/> */}
 
         </div>
 
