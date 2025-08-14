@@ -14,7 +14,7 @@ function Profile() {
     return (
         <div>
             <Header />
-            <div className='px-10 md:px-20 my-10'>
+            <div className='px-30 md:px-20 my-25'>
                 <Tabs defaultValue={defaultTab} className="w-full">
                     <TabsList className='w-full flex justify-start'>
                         <TabsTrigger value="my-listing">My Listing</TabsTrigger>

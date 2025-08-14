@@ -1,7 +1,7 @@
 import Service from '@/Shared/Service'
 import { db } from './../../configs'
 import { CarImages, CarListing } from './../../configs/schema'
-import { eq } from 'drizzle-orm'
+import { eq , and , sql } from 'drizzle-orm'
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import Header from '@/components/Header'
@@ -22,19 +22,36 @@ function SearchByOptions() {
 
     },[])
 
-    const GetCarList = async () => {
+   const GetCarList = async () => {
+  let conditions = [];
 
-        const result = await db.select().from(CarListing)
-            .innerJoin(CarImages, eq(CarListing.id, CarImages.carListingId))
-            .where(condition != undefined && eq(CarListing.condition, condition))
-            .where(make != undefined && eq(CarListing.make, make))
+  if (condition) {
+    conditions.push(eq(CarListing.condition, condition));
+  }
+  if (make) {
+    conditions.push(eq(CarListing.make, make));
+  }
+  if (price) {
+    conditions.push(sql`${CarListing.sellingPrice} <= ${Number(price)}`);
+  }
 
-            const resp=Service.FormatResult(result)
-            console.log(resp);
-            setCarList(resp)
-            
-            
-    }
+  let query = db
+    .select()
+    .from(CarListing)
+    .innerJoin(CarImages, eq(CarListing.id, CarImages.carListingId));
+
+  if (conditions.length > 0) {
+    query = query.where(
+      conditions.length > 1 ? and(...conditions) : conditions[0]
+    );
+  }
+
+  const result = await query;
+  const resp = Service.FormatResult(result);
+  console.log(resp);
+  setCarList(resp);
+};
+
 
 
     return (

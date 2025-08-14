@@ -19,7 +19,7 @@ function Header() {
         <img
           src="/logo.svg"
           alt="Logo"
-          className="w-[30px] h-[60px] ml-20  scale-600 object-contain"
+          className="w-[30px] h-[45px] ml-20  scale-600 object-contain"
         />
       </Link>
 
@@ -40,7 +40,7 @@ function Header() {
       <div className="flex items-center gap-4">
         {isSignedIn && <UserButton />}
         <Link to={isSignedIn ? '/profile' : '/sign-in'}>
-          <Button className="bg-red-900 hover:bg-red-800 text-white text-sm px-4 py-2 transition-all">
+          <Button className="bg-red-900 hover:bg-red-800 text-white text-sm px-4 py-2 transition-all mr-4">
             Submit Listing
           </Button>
         </Link>
