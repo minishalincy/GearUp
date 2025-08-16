@@ -16,7 +16,7 @@ function Footer() {
     <img
       src="/logo.svg"
       alt="Logo"
-      className="w-[100px] h-[60px] scale-300 object-contain"
+      className="w-[50px] h-[60px] scale-300 object-contain"
     />
   </Link>
 </div>
@@ -28,31 +28,23 @@ function Footer() {
 </p>
 
 
-        <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Buy a Car </a>
-          </li>
+    <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+  <li>
+    <span className="text-gray-700">
+      © {new Date().getFullYear()} Built by{" "}
+      <a
+        href="https://personal-portfolio-q9lq.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-semibold text-gray-700 hover:text-gray-900 transition cursor-pointer"
+      >
+        Minishalincy
+      </a>
+    </span>
+  </li>
+</ul>
 
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Sell Your Car </a>
-          </li>
 
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> New Arrivals </a>
-          </li>
-
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Car Reviews </a>
-          </li>
-
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Financing </a>
-          </li>
-
-          <li>
-            <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Contact Us </a>
-          </li>
-        </ul>
 
 
        

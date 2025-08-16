@@ -19,7 +19,7 @@ function Header() {
         <img
           src="/logo.svg"
           alt="Logo"
-          className="w-[30px] h-[45px] ml-20  scale-600 object-contain"
+          className="w-[140px] h-[45px] ml-4 object-contain block"
         />
       </Link>
 
