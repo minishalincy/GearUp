@@ -79,6 +79,10 @@ const CarMakes=[
         {
             "id": 20,
             "name": "Volvo"
+        },
+        {
+            "id":21,
+            "name":"KIA"
         }
     
     
@@ -100,7 +104,23 @@ const Pricing=[
     {
         id:4,
         amount:10000
-    }
+    },
+     {
+        id:5,
+        amount:20000
+    },
+     {
+        id:6,
+        amount:30000
+    },
+     {
+        id:7,
+        amount:50000
+    },
+     {
+        id:8,
+        amount:80000
+    },
 ]
 
 const Category=[
