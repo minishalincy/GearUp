@@ -32,60 +32,59 @@ const CarMakes=[
             "id": 8,
             "name": "Jaguar"
         },
-        {
-            "id": 9,
-            "name": "Lamborghini"
+         {
+            "id":9,
+            "name":"Kia"
         },
         {
             "id": 10,
-            "name": "Land Rover"
+            "name": "Lamborghini"
         },
         {
             "id": 11,
-            "name": "Lexus"
+            "name": "Land Rover"
         },
         {
             "id": 12,
-            "name": "Mazda"
+            "name": "Lexus"
         },
         {
             "id": 13,
-            "name": "Mercedes-Benz"
+            "name": "Mazda"
         },
         {
             "id": 14,
-            "name": "Nissan"
+            "name": "Mercedes-Benz"
         },
         {
             "id": 15,
-            "name": "Porsche"
+            "name": "Nissan"
         },
         {
             "id": 16,
-            "name": "Subaru"
+            "name": "Porsche"
         },
         {
             "id": 17,
-            "name": "Tesla"
+            "name": "Subaru"
         },
         {
             "id": 18,
-            "name": "Toyota"
+            "name": "Tesla"
         },
         {
             "id": 19,
-            "name": "Volkswagen"
+            "name": "Toyota"
         },
         {
             "id": 20,
-            "name": "Volvo"
+            "name": "Volkswagen"
         },
         {
-            "id":21,
-            "name":"KIA"
+            "id": 21,
+            "name": "Volvo"
         }
-    
-    
+       
 ]
 
 const Pricing=[
