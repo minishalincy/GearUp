@@ -9,7 +9,7 @@ It allows users to browse, search, list, and manage car listings, as well as eng
 
 ##  Features
 -  **User Authentication** with Clerk
--  **Browse & Search Cars** by category, keyword, or filters
+-  **Browse & Search Cars** by category, keyword and filters
 -  **Add & Edit Listings** with images
 -  **Real-Time Chat** with Sendbird
 -  Fully responsive and mobile-friendly
